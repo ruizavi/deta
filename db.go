@@ -11,7 +11,9 @@ type (
 	}
 )
 
-var BuilderMapFunc = map[string]BuilderFunc{}
+var BuilderMapFunc = map[string]BuilderFunc{
+	"sqlite": NewSqliteBuilder,
+}
 
 func newSource(sqlDB *sql.DB, driver string) *DB {
 	db := &DB{

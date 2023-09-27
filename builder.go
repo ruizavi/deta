@@ -1,23 +1,23 @@
 package deta
 
 type Builder interface {
-	RawQuery(query string)
-	Select(table string)
+	//RawQuery(query string)
+	Select(table string, cols ...string) *SelectQuery
 
-	Insert(table string)
-	Upsert(table string)
-	Delete(table string)
-	Update(table string)
+	// Insert(table string)
+	// Upsert(table string)
+	// Delete(table string)
+	// Update(table string)
 
-	CreateTable()
-	RenameTable()
-	DropTable()
-	TruncateTable()
+	// CreateTable()
+	// RenameTable()
+	// DropTable()
+	// TruncateTable()
 
-	AddColumn()
-	RenameColumn()
-	DropColumn()
-	AlterColumn()
+	// AddColumn()
+	// RenameColumn()
+	// DropColumn()
+	// AlterColumn()
 }
 
 type BaseBuilder struct {
